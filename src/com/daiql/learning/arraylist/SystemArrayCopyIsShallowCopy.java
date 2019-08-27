@@ -5,7 +5,7 @@ package com.daiql.learning.arraylist;
  * Date 2019/8/26 14:04
  * Description 测试 System.arrayCopy()是浅拷贝，
  */
-public class SystemArrayCopyTest {
+public class SystemArrayCopyIsShallowCopy {
     public static void main(String[] args) {
         Student grade = new Student("One");
         Person person = new Person("tom", 18);
@@ -21,7 +21,7 @@ public class SystemArrayCopyTest {
         System.out.println("people2.grade = " + people2[0].getGrade().getGrade());
     }
 
-    static class Student {
+    private static class Student {
         private String grade;
         public Student() {}
         public Student(String grade) {
@@ -37,7 +37,7 @@ public class SystemArrayCopyTest {
         }
     }
 
-    static class Person {
+    private static class Person {
         private String name;
         private int age;
         private Student grade;
